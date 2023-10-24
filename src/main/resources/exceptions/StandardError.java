@@ -14,6 +14,16 @@ public class StandardError implements Serializable {
 
     private String serialVersionUID;    
     
+    public String getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+
+    public void setSerialVersionUID(String serialVersionUID) {
+        this.serialVersionUID = serialVersionUID;
+    }
+
+
     public StandardError() {
     }
 

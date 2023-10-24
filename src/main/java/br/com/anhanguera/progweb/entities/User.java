@@ -15,7 +15,16 @@ public class User implements Serializable {
     private String email;
     private String telefone;
     private String password;
+
     private String serialVersionUID;
+
+    public String getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public void setSerialVersionUID(String serialVersionUID) {
+        this.serialVersionUID = serialVersionUID;
+    }
 
     public User(Long id, String nome, String email, String telefone, String password) {
         this.id = id;
