@@ -1,4 +1,4 @@
-package exceptions;
+package br.com.anhanguera.progweb.exceptions;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 public class StandardError implements Serializable {
     private LocalDateTime timestamp;
     private HttpStatus status;
-    private String error;
+    private Exception error;
     private String message;
     private String path;
 
@@ -28,7 +28,7 @@ public class StandardError implements Serializable {
     }
 
 
-    public StandardError(LocalDateTime timestamp, HttpStatus status, String error, String message, String path) {
+    public StandardError(LocalDateTime timestamp, HttpStatus status, Exception error, String message, String path) {
         this.timestamp = timestamp;
         this.status = status;
         this.error = error;
@@ -57,12 +57,12 @@ public class StandardError implements Serializable {
     }
 
 
-    public String getError() {
+    public Exception getError() {
         return error;
     }
 
 
-    public void setError(String error) {
+    public void setError(Exception error) {
         this.error = error;
     }
 
