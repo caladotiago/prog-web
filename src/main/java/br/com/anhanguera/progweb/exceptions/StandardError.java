@@ -2,6 +2,7 @@ package br.com.anhanguera.progweb.exceptions;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
 
@@ -34,6 +35,7 @@ public class StandardError implements Serializable {
         this.error = error;
         this.message = message;
         this.path = path;
+        this.serialVersionUID = UUID.randomUUID().toString();
     }
 
 
