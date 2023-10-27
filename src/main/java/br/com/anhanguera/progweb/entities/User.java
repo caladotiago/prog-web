@@ -1,6 +1,7 @@
 package br.com.anhanguera.progweb.entities;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,6 +36,7 @@ public class User implements Serializable {
         this.email = email;
         this.telefone = telefone;
         this.password = password;
+        this.serialVersionUID = UUID.randomUUID().toString();
     }
 
     public User() {
